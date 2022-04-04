@@ -11,7 +11,7 @@ public:
             {
                 n=ans;
                 ans=0;
-                if(n>=1 and n<=9)break;
+                if(n>=1 and n<=9 and n!=7)break;
             }
             
         }
