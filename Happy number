@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        int ans=0,r;
+        while(n)
+        {
+            r=n%10;
+            ans+=r*r;
+            n/=10;
+            if(n==0)
+            {
+                n=ans;
+                ans=0;
+                if(n>=1 and n<=9)break;
+            }
+            
+        }
+        if(n==1)return true;
+        else return false;
+    }
+};
