@@ -1,0 +1,12 @@
+class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        t=""
+        for i in words:
+            k=i
+            p=i[::-1]
+            if k==p:
+                return k
+                break
+        return t
+            
+        
