@@ -1,0 +1,28 @@
+#define m 32
+class Solution {
+public:
+    bool is_prime(int n) {
+    if (n == 1) {
+        return false;
+    }
+
+    int i = 2;
+    while (i*i <= n) {
+        if (n % i == 0) {
+            return false;
+        }
+        i += 1;
+    }
+    return true;
+}
+    int countPrimeSetBits(int left, int right) {
+        int ans=0;
+        for(int i=left;i<=right;i++)
+        {
+            bitset<m>a(i);
+            int p=a.count();
+            if(is_prime(p))ans++;
+        }
+        return ans;
+    }
+};
