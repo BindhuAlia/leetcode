@@ -1,0 +1,11 @@
+class Solution {
+public:
+    int divide(int dividend, int divisor) {
+        int r=0;
+        if(dividend == INT_MIN && divisor==-1){
+            return INT_MAX;
+        }
+        r=dividend/divisor;
+        return r;
+    }
+};
