@@ -1,0 +1,14 @@
+#define m 32
+class Solution {
+public:
+    vector<int> countBits(int n) {
+        vector<int>ans;
+        for(int i=0;i<=n;i++)
+        {
+            bitset<m>a(i);
+            ans.emplace_back(a.count());
+            
+        }
+        return ans;
+    }
+};
