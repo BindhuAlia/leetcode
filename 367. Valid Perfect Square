@@ -1,0 +1,9 @@
+class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        int temp=num;
+        int p=pow(num,0.5);
+        if(p*p==temp)return true;
+        else return false;
+    }
+};
