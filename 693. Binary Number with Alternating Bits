@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool hasAlternatingBits(int n) {
+        string s="";
+        int r=0;
+        while(n!=0)
+        {
+            r=n%2;
+            s+=to_string(r);
+            n/=2;
+        }
+        cout<<s;
+        for(int i=0;i<s.length()-1;i++)
+        {
+            if(s[i]==s[i+1])return false;
+        }
+        return true;
+    }
+};
