@@ -1,0 +1,20 @@
+void f(TreeNode* root,int &i,int &ans,int &k)
+{
+    if(root==NULL)return ;
+    f(root->left,i,ans,k);
+    if(i==k and ans==-1)
+    {
+        ans=root->val;
+        return;
+    }
+    i++;
+    f(root->right,i,ans,k);
+}
+class Solution {
+public:
+    int kthSmallest(TreeNode* root, int k) {
+        int i=1,ans=-1;
+        f(root,i,ans,k);
+        return ans;
+    }
+};
